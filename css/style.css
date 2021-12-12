@@ -46,9 +46,9 @@
     box-sizing: border-box;
 }
 
-body {
-    min-width: 1440px;
-    max-width: 1440px;
+body {    
+    display: grid;
+    justify-content: center;
 }
 
 .article__header {
@@ -102,6 +102,8 @@ body {
 }
 
 .article-one {
+    width: 1440px;
+
     display: grid;
     grid-template-areas:    'article-one__h1 article-one__images-wrap'
                             'article-one__p article-one__images-wrap'
@@ -245,6 +247,8 @@ body {
 }
 
 .article-two {
+    width: 1440px;
+
     display: grid;
     justify-items: center;
 
