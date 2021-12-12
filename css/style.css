@@ -160,6 +160,8 @@ body {
     border: 0;
     background-color: #FEC901;
     color: black;
+
+    cursor: pointer;
 }
 
 .article-one__images-wrap {
