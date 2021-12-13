@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Jost';
-    src: url('../fonts/Jost/200/Jost-ExtraLight.eot'),
+    src: url('../fonts/Jost/200/Jost-ExtraLight.eot') format('embedded-opentype'),
         url('../fonts/Jost/200/Jost-ExtraLight.woff2') format('woff2'),
         url('../fonts/Jost/200/Jost-ExtraLight.woff') format('woff'),
         url('../fonts/Jost/200/Jost-ExtraLight.ttf') format('truetype'),
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'Jost';
-    src: url('../fonts/Jost/300/Jost-Light.eot'),
+    src: url('../fonts/Jost/300/Jost-Light.eot') format('embedded-opentype'),
         url('../fonts/Jost/300/Jost-Light.woff2') format('woff2'),
         url('../fonts/Jost/300/Jost-Light.woff') format('woff'),
         url('../fonts/Jost/300/Jost-Light.ttf') format('truetype'),
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'Jost';
-    src: url('../fonts/Jost/400/Jost-Regular.eot'),
+    src: url('../fonts/Jost/400/Jost-Regular.eot') format('embedded-opentype'),
         url('../fonts/Jost/400/Jost-Regular.woff2') format('woff2'),
         url('../fonts/Jost/400/Jost-Regular.woff') format('woff'),
         url('../fonts/Jost/400/Jost-Regular.ttf') format('truetype'),
@@ -33,7 +33,7 @@
 
 @font-face {
     font-family: 'Jost';
-    src: url('../fonts/Jost/500/Jost-Medium.eot'),
+    src: url('../fonts/Jost/500/Jost-Medium.eot') format('embedded-opentype'),
         url('../fonts/Jost/500/Jost-Medium.woff2') format('woff2'),
         url('../fonts/Jost/500/Jost-Medium.woff') format('woff'),
         url('../fonts/Jost/500/Jost-Medium.ttf') format('truetype'),
@@ -99,6 +99,14 @@ body {
     font-weight: 500;
     font-size: 24px;    
     letter-spacing: 0.01em;
+}
+
+.article-two_margin-top {
+    margin-top: 122px;
+}
+
+.article-three_margin-top {
+    margin-top: 121px;
 }
 
 .article-one {
@@ -258,10 +266,6 @@ body {
     background-color: #161616;
 }
 
-.article-two_margin-top {
-    margin-top: 122px;
-}
-
 .article-two__section-cell {
     margin-top: 87px;
     margin-bottom: 21px;
@@ -308,4 +312,135 @@ body {
     z-index: 0;
     top: 3.22px;
     left: 94px;
+}
+
+.window-cards {
+    width: 1046px;
+    overflow: hidden;
+    display: grid;
+}
+
+.window-cards_margin-top {
+    margin-top: 56px;
+}
+
+.article-three {
+    width: 1440px;
+
+    display: grid;
+    justify-items: center;
+
+    background-color: #161616;
+    font-family: 'Jost';
+}
+
+.article-three__wrap-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 236px);
+    column-gap: 34px;
+    position: relative;
+    /* left: -50px; */
+}
+
+.article-three__card {
+    display: grid;
+    grid-template-areas:    'article-three__card__image article-three__card__image'
+                            'article-three__card__vertical-line article-three__card__h3'
+                            'article-three__card__p article-three__card__p'
+                            'article-three__card__a article-three__card__a';
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(3, fit-content(100%)) 1fr;
+    align-items: center;
+    align-content: start;
+
+    border-radius: 0px 0px 7px 7px;
+    background-color: #2D2E2A;
+    background-image: url(../images/17.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+.article-three__card__image {
+    grid-area: article-three__card__image;
+    justify-self: center;
+    margin-top: 18px;
+}
+
+.article-three__card__vertical-line {
+    grid-area: article-three__card__vertical-line;
+    height: 11px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: #FEC901;
+    margin: 9px 4px 0px 17px;
+}
+
+.article-three__card__h3 {
+    grid-area: article-three__card__h3;
+    margin: 9px 9px 0px 0px;
+
+    color: #FFFFFF;
+    line-height: 21px;
+    font-weight: 500;
+    font-size: 16px;    
+    letter-spacing: -0.0075em;
+}
+
+.article-three__card__p {
+    grid-area: article-three__card__p;
+    margin: 8px 9px 0px 17px;
+
+    color: #FFFFFF;
+    line-height: 21px;
+    font-weight: 300;
+    font-size: 16px;  
+    
+    letter-spacing: -0.0075em;
+}
+
+.article-three__card__a {
+    grid-area: article-three__card__a;
+    align-self: end;
+    display: grid;
+    grid-template-columns: fit-content(100%) min-content;
+    align-items: center;
+    column-gap: 8px;
+    margin: 4px 9px 17px 17px;
+
+    text-decoration: none;
+    color: #FEC901;
+    font-family: Jost;
+    line-height: 21px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.0075em;
+}
+
+.window-cards-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 43px);
+    column-gap: 12px;
+    height: 4px;
+}
+
+.window-cards-slider_margin {
+    margin: 35px 0px 50px 0px;
+}
+
+.window-cards-slider__item {
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.window-cards-slider__item:first-child {
+    background-color: #FEC901;
+}
+.window-cards-slider__item:nth-child(2) {
+    background-color: #FEC901;
+    opacity: 0.6;
+}
+.window-cards-slider__item:last-child {
+    background-color: #FEC901;
+    opacity: 0.2;
 }

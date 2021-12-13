@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Light.eot');
+    src: url('Jost-Light.eot?#iefix') format('embedded-opentype'),
+        url('Jost-Light.woff2') format('woff2'),
+        url('Jost-Light.woff') format('woff'),
+        url('Jost-Light.ttf') format('truetype'),
+        url('Jost-Light.svg#Jost-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
