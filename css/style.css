@@ -520,3 +520,133 @@ body {
     justify-self: start;
     margin: 0px 150px 0px 0px;
 }
+
+.article-fifth {
+    display: grid;
+    justify-items: center;
+    width: 1440px;
+}
+
+.article-fifth__header {
+    display: grid;
+    grid-template-areas:    'fifth__header__line fifth__header__h2'
+                            'fifth__header__p fifth__header__p ';
+    grid-template-columns: fit-content(100%) fit-content(100%);
+    align-items: center;
+    column-gap: 6px;
+
+    max-width: 943px;
+    margin-top: 71px;
+
+    font-family: 'Jost';
+}
+
+.fifth__header__line {
+    grid-area: fifth__header__line;
+    justify-self: end;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+
+    background-color: #303030;
+}
+
+.fifth__header__h2 {
+    grid-area: fifth__header__h2;
+    justify-self: start;
+    text-align: center;
+
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #161616;
+}
+
+.fifth__header__p {
+    grid-area: fifth__header__p;
+
+    margin-top: 18px;
+
+    color: #000000;
+
+    text-align: center;
+    line-height: 31.2px;
+    font-weight: 500;
+    font-size: 24px;    
+    letter-spacing: 0.01em;
+}
+
+.article-fifth__form {
+    display: grid;
+    grid-template-areas:    'article-fifth__form__name article-fifth__form__area-of-the-city article-fifth__form__cleaning-type'
+                            'article-fifth__form__number-of-rooms article-fifth__form__square article-fifth__form__room-type'
+                            'article-fifth__form__phone-number article-fifth__form__additional article-fifth__form__additional'
+                            'article-fifth__form__wishes article-fifth__form__wishes ...'
+                            'article-fifth__form__submit ... ...';
+    grid-template-columns: repeat(3, 360px);
+    width: 1120px;
+    column-gap: 20px;
+    row-gap: 16px;
+
+    margin-top: 56px;
+    margin-bottom: 53px;
+}
+
+.article-fifth__form__name {
+    grid-area: article-fifth__form__name;
+}
+
+.article-fifth__form__area-of-the-city {
+    grid-area: article-fifth__form__area-of-the-city;
+    position: relative;
+}
+
+.ul__area-of-the-city {
+    position: absolute;
+    display: none;
+}
+
+.article-fifth__form__cleaning-type {
+    grid-area: article-fifth__form__cleaning-type;
+    position: relative;
+}
+
+.ul__cleaning-type {
+    position: absolute;
+    display: none;
+}
+
+.article-fifth__form__number-of-rooms {
+    grid-area: article-fifth__form__number-of-rooms;
+}
+
+.article-fifth__form__square {
+    grid-area: article-fifth__form__square;
+}
+
+.article-fifth__form__room-type {
+    grid-area: article-fifth__form__room-type;
+    position: relative;
+}
+
+.ul__room-type {
+    position: absolute;
+    display: none;
+}
+
+.article-fifth__form__phone-number {
+    grid-area: article-fifth__form__phone-number;
+}
+
+.article-fifth__form__additional {
+    grid-area: article-fifth__form__additional;
+}
+
+.article-fifth__form__wishes {
+    grid-area: article-fifth__form__wishes;
+}
+
+.article-fifth__form__submit {
+    grid-area: article-fifth__form__submit;
+}
