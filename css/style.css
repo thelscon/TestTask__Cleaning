@@ -522,40 +522,33 @@ body {
 }
 
 .article-fifth {
+    width: 1440px;
+
     display: grid;
     justify-items: center;
-    width: 1440px;
+    background-color: #FEC901;
+
+    background-image: url(../images/21.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 
 .article-fifth__header {
     display: grid;
-    grid-template-areas:    'fifth__header__line fifth__header__h2'
-                            'fifth__header__p fifth__header__p ';
-    grid-template-columns: fit-content(100%) fit-content(100%);
-    align-items: center;
-    column-gap: 6px;
+    justify-items: center;
+    row-gap: 18px;
+    
 
-    max-width: 943px;
-    margin-top: 71px;
+    margin: 71px 250px 0px 247px;
 
     font-family: 'Jost';
 }
 
-.fifth__header__line {
-    grid-area: fifth__header__line;
-    justify-self: end;
-    width: 24px;
-    height: 2px;
-    border-radius: 1px;
-
-    background-color: #303030;
-}
-
 .fifth__header__h2 {
-    grid-area: fifth__header__h2;
-    justify-self: start;
-    text-align: center;
-
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(100%));
+    column-gap: 6px;
+    align-items: center;
     line-height: 26px;
     font-weight: 400;
     font-size: 20px;
@@ -563,11 +556,16 @@ body {
     color: #161616;
 }
 
+.fifth__header__h2::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+
+    background-color: #303030;
+}
+
 .fifth__header__p {
-    grid-area: fifth__header__p;
-
-    margin-top: 18px;
-
     color: #000000;
 
     text-align: center;
@@ -591,15 +589,43 @@ body {
 
     margin-top: 56px;
     margin-bottom: 53px;
+    font-family: 'Jost';
+}
+
+.article-fifth__form > *:not(.article-fifth__form__additional):not(.article-fifth__form__submit){
+    border: 1px solid #000000;
+    background-color: transparent;
 }
 
 .article-fifth__form__name {
     grid-area: article-fifth__form__name;
+    padding: 12px 24px 11px 24px;
+}
+
+.article-fifth__form__name {
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
+}
+
+.article-fifth__form__name::placeholder {
+    opacity: 1;
 }
 
 .article-fifth__form__area-of-the-city {
     grid-area: article-fifth__form__area-of-the-city;
     position: relative;
+    padding: 12px 24px 11px 24px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
 }
 
 .ul__area-of-the-city {
@@ -610,6 +636,14 @@ body {
 .article-fifth__form__cleaning-type {
     grid-area: article-fifth__form__cleaning-type;
     position: relative;
+    padding: 12px 24px 11px 24px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
 }
 
 .ul__cleaning-type {
@@ -619,15 +653,47 @@ body {
 
 .article-fifth__form__number-of-rooms {
     grid-area: article-fifth__form__number-of-rooms;
+    padding: 12px 24px 11px 24px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
+}
+
+.article-fifth__form__number-of-rooms::placeholder {
+    opacity: 1;
 }
 
 .article-fifth__form__square {
     grid-area: article-fifth__form__square;
+    padding: 12px 24px 11px 24px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
+}
+
+.article-fifth__form__square::placeholder {
+    opacity: 1;
 }
 
 .article-fifth__form__room-type {
     grid-area: article-fifth__form__room-type;
     position: relative;
+    padding: 12px 24px 11px 24px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
 }
 
 .ul__room-type {
@@ -637,16 +703,119 @@ body {
 
 .article-fifth__form__phone-number {
     grid-area: article-fifth__form__phone-number;
+    padding: 12px 24px 11px 24px;
+    max-height: 44px;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
+}
+
+.article-fifth__form__phone-number::placeholder {
+    opacity: 1;
 }
 
 .article-fifth__form__additional {
     grid-area: article-fifth__form__additional;
+    display: grid;
+    grid-template-areas:    'article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2 article-fifth__form__additional__h2'
+                            'check1 label1 check2 label2 check3 label3 check4 label4';
+    grid-template-columns: repeat(8, fit-content(100%));
+    column-gap: 4px;
+    row-gap: 5px;
+    align-content: center;
+    align-items: center;
+}
+
+.article-fifth__form__additional__h2 {
+    grid-area: article-fifth__form__additional__h2;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    columns: #000000;
+}
+
+.article-fifth__form__additional > label {
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #000000;
+}
+
+.article-fifth__form__additional > input:not(.article-fifth__form__additional__checkbox-window-cleaning) {
+    margin-left: 4px;
+}
+
+.article-fifth__form__additional__checkbox-window-cleaning {
+    grid-area: check1;
+}
+
+.article-fifth__form__additional__checkbox-window-cleaning__label {
+    grid-area: label1;
+}
+
+.article-fifth__form__additional__checkbox-dry-cleaning-of-furniture {
+    grid-area: check2;
+}
+
+.article-fifth__form__additional__checkbox-dry-cleaning-of-furniture__label {
+    grid-area: label2;
+}
+
+.article-fifth__form__additional__checkbox-disinfection {
+    grid-area: check3;
+}
+
+.article-fifth__form__additional__checkbox-disinfection__label {
+    grid-area: label3;
+}
+
+.article-fifth__form__additional__checkbox-dedusting {
+    grid-area: check4;
+}
+
+.article-fifth__form__additional__checkbox-dedusting__label {
+    grid-area: label4;
 }
 
 .article-fifth__form__wishes {
     grid-area: article-fifth__form__wishes;
+    height: 140px;
+    margin-top: 13px;
+    padding: 11px 24px;
+    resize: none;
+
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
+    color: #303030;
+}
+
+.article-fifth__form__wishes::placeholder {
+    opacity: 1;
 }
 
 .article-fifth__form__submit {
     grid-area: article-fifth__form__submit;
+    margin-top: 14px;
+    border: 0;
+    padding: 11px 59px 12px 60px;
+    
+    background-color: #161616;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.8px;
+    letter-spacing: -0.0075em;
 }
