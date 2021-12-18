@@ -46,7 +46,6 @@
     </article>
     <article class="article-two">
         <header class="article__header article-two_margin-top">
-            <div class="article__header__line"></div>
             <h2 class="article__header__h2">Как это работает?</h2>
             <p class="article__header__p">
                 Нет времени на уборку? Мы готовы помочь
@@ -74,7 +73,6 @@
     </article>
     <article class="article-three">
         <header class="article__header article-three_margin-top">
-            <div class="article__header__line"></div>
             <h2 class="article__header__h2">Все виды услуг</h2>
             <p class="article__header__p">
                 Мы готовы взяться за работу любой сложности, профессиональное оборудование, квалифицированный персонал, сертифицированная химия.
@@ -152,7 +150,6 @@
     </article>
     <article class="article__fourth article__fourth_padding"> 
         <header class="article__header__fourth article__fourth_margin-top_max-width">
-            <div class="article__header__line"></div>
             <h2 class="article__header__h2 article__fourth__header__h2_color">Уборка Яхт и Катеров</h2>
             <p class="article__header__p article__fourth__header__p_color">
                 Мы предлагаем уникальное предложение по уборке.
@@ -181,45 +178,30 @@
         </header>
         <form action="" class="article-fifth__form">
             <input type="text" class="article-fifth__form__name" placeholder="Имя">
-            <button class="article-fifth__form__area-of-the-city">
-                Район города
-                <ul class="ul__area-of-the-city">
-                    <li class="article-fifth__form__li">1</li>
-                    <li class="article-fifth__form__li">2</li>
-                    <li class="article-fifth__form__li">3</li>
-                    <li class="article-fifth__form__li">4</li>
-                    <li class="article-fifth__form__li">5</li>
-                </ul>
-            </button>
-            <button class="article-fifth__form__cleaning-type">
-                Тип уборки
-                <ul class="ul__cleaning-type">
-                    <li class="article-fifth__form__li">1</li>
-                    <li class="article-fifth__form__li">2</li>
-                    <li class="article-fifth__form__li">3</li>
-                    <li class="article-fifth__form__li">4</li>
-                    <li class="article-fifth__form__li">5</li>
-                </ul>
-            </button>
+            <select class="article-fifth__form__area-of-the-city article-fifth__form_select-style">asd
+                <option class="select-option">Район города</option>
+                <option>Район города 1</option>
+                <option>Район города 2</option>
+            </select>
+            <select class="article-fifth__form__cleaning-type article-fifth__form_select-style">
+                <option>Тип уборки</option>
+                <option>Тип уборки 1</option>
+                <option>Тип уборки 2</option>
+            </select>
             <input type="text" class="article-fifth__form__number-of-rooms" placeholder="Количество комнат">
             <input type="text" class="article-fifth__form__square" placeholder="Площадь">
-            <button class="article-fifth__form__room-type">
-                Тип помещения
-                <ul class="ul__room-type">
-                    <li class="article-fifth__form__li">1</li>
-                    <li class="article-fifth__form__li">2</li>
-                    <li class="article-fifth__form__li">3</li>
-                    <li class="article-fifth__form__li">4</li>
-                    <li class="article-fifth__form__li">5</li>
-                </ul>
-            </button>
+            <select class="article-fifth__form__room-type article-fifth__form_select-style">
+                <option>Тип помещения</option>
+                <option>Тип помещения 1</option>
+                <option>Тип помещения 2</option>
+            </select>
             <input type="tel" class="article-fifth__form__phone-number" placeholder="Номер телефона">
             <section class="article-fifth__form__additional">
                 <h2 class="article-fifth__form__additional__h2">Дополнительные опции</h2>
-                <input type="checkbox" id="window-cleaning" class="article-fifth__form__additional__checkbox-window-cleaning"><label for="window-cleaning" class="article-fifth__form__additional__checkbox-window-cleaning__label">Мойка окон</label>
-                <input type="checkbox" id="dry-cleaning-of-furniture" class="article-fifth__form__additional__checkbox-dry-cleaning-of-furniture"><label for="dry-cleaning-of-furniture" class="article-fifth__form__additional__checkbox-dry-cleaning-of-furniture__label">Химчистка мебели</label>
-                <input type="checkbox" id="disinfection" class="article-fifth__form__additional__checkbox-disinfection"><label for="disinfection" class="article-fifth__form__additional__checkbox-disinfection__label">Дезинфекция</label>
-                <input type="checkbox" id="dedusting" class="article-fifth__form__additional__checkbox-dedusting"><label for="dedusting" class="article-fifth__form__additional__checkbox-dedusting__label">Обеспыливание</label>
+                <input type="checkbox" checked id="window-cleaning" class="article-fifth__form__additional__checkbox-window-cleaning article-fifth__form__additional__checkbox_style"><label for="window-cleaning" class="article-fifth__form__additional__checkbox-window-cleaning__label article-fifth__form__additional__label_style">Мойка окон</label>
+                <input type="checkbox" id="dry-cleaning-of-furniture" class="article-fifth__form__additional__checkbox-dry-cleaning-of-furniture article-fifth__form__additional__checkbox_style"><label for="dry-cleaning-of-furniture" class="article-fifth__form__additional__checkbox-dry-cleaning-of-furniture__label article-fifth__form__additional__label_style">Химчистка мебели</label>
+                <input type="checkbox" id="disinfection" class="article-fifth__form__additional__checkbox-disinfection disinfection article-fifth__form__additional__checkbox_style"><label for="disinfection" class="article-fifth__form__additional__checkbox-disinfection__label article-fifth__form__additional__label_style">Дезинфекция</label>
+                <input type="checkbox" id="dedusting" class="article-fifth__form__additional__checkbox-dedusting article-fifth__form__additional__checkbox_style"><label for="dedusting" class="article-fifth__form__additional__checkbox-dedusting__label article-fifth__form__additional__label_style">Обеспыливание</label>
             </section>
             <textarea id="wishes" class="article-fifth__form__wishes" placeholder="Напишите дополнительные пожелания"></textarea>
             <input type="submit" value="Отправить" class="article-fifth__form__submit">

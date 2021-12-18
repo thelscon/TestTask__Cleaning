@@ -53,11 +53,8 @@ body {
 
 .article__header {
     display: grid;
-    grid-template-areas:    'article__header__line article__header__h2'
-                            'article__header__p article__header__p';
-    grid-template-columns: repeat(2, fit-content(100%));
     align-items: center;
-    column-gap: 6px;
+    justify-items: center;
 
     margin-left: 150px;
     margin-right: 150px;
@@ -65,9 +62,8 @@ body {
     font-family: 'Jost';
 }
 
-.article__header__line {
-    grid-area: article__header__line;
-    justify-self: end;
+.article__header__h2::before {
+    content: '';
     width: 24px;
     height: 2px;
     border-radius: 1px;
@@ -76,10 +72,12 @@ body {
 }
 
 .article__header__h2 {
-    grid-area: article__header__h2;
-    justify-self: start;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(100%));
+    align-items: center;
+    column-gap: 6px;
 
+    text-align: center;
     line-height: 26px;
     font-weight: 400;
     font-size: 20px;
@@ -88,8 +86,6 @@ body {
 }
 
 .article__header__p {
-    grid-area: article__header__p;
-
     margin-top: 18px;
 
     color: #FFFFFF;
@@ -424,6 +420,7 @@ body {
     grid-template-columns: repeat(3, 43px);
     column-gap: 12px;
     height: 4px;
+    cursor: pointer;
 }
 
 .window-cards-slider_margin {
@@ -448,13 +445,10 @@ body {
 }
 
 .article__header__fourth {
-    grid-area: article__header__fourth;
+    grid-area: article__header__fourth ;
     display: grid;
-    grid-template-areas:    'article__header__line article__header__h2'
-                            'article__header__p article__header__p';
-    grid-template-columns: repeat(2, fit-content(100%));
     align-items: center;
-    column-gap: 6px;
+    justify-items: center;
 
     margin-left: 150px;
     margin-right: 150px;
@@ -537,8 +531,6 @@ body {
     display: grid;
     justify-items: center;
     row-gap: 18px;
-    
-
     margin: 71px 250px 0px 247px;
 
     font-family: 'Jost';
@@ -583,6 +575,7 @@ body {
                             'article-fifth__form__wishes article-fifth__form__wishes ...'
                             'article-fifth__form__submit ... ...';
     grid-template-columns: repeat(3, 360px);
+    align-items: start;
     width: 1120px;
     column-gap: 20px;
     row-gap: 16px;
@@ -595,6 +588,10 @@ body {
 .article-fifth__form > *:not(.article-fifth__form__additional):not(.article-fifth__form__submit){
     border: 1px solid #000000;
     background-color: transparent;
+}
+
+.article-fifth__form > *:not(.article-fifth__form__additional):not(.article-fifth__form__wishes){
+    max-height: 44px;
 }
 
 .article-fifth__form__name {
@@ -617,7 +614,9 @@ body {
 
 .article-fifth__form__area-of-the-city {
     grid-area: article-fifth__form__area-of-the-city;
-    position: relative;
+}
+
+.article-fifth__form_select-style {
     padding: 12px 24px 11px 24px;
 
     font-family: 'Jost';
@@ -626,6 +625,13 @@ body {
     line-height: 20.8px;
     letter-spacing: -0.0075em;
     color: #303030;
+    background-color: transparent;
+    background-image: url(../images/20.svg);
+    background-repeat: no-repeat;
+    background-position-x: 337px;
+    background-position-y: 27px;
+    appearance: none;
+    cursor: pointer;
 }
 
 .ul__area-of-the-city {
@@ -704,7 +710,6 @@ body {
 .article-fifth__form__phone-number {
     grid-area: article-fifth__form__phone-number;
     padding: 12px 24px 11px 24px;
-    max-height: 44px;
 
     font-family: 'Jost';
     font-size: 16px;
@@ -758,8 +763,36 @@ body {
     grid-area: check1;
 }
 
+.article-fifth__form__additional__checkbox_style {
+    opacity: 0;
+}
+
+.article-fifth__form__additional__checkbox_style:checked + .article-fifth__form__additional__label_style::before {
+    background-image: url(../images/22.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .article-fifth__form__additional__checkbox-window-cleaning__label {
     grid-area: label1;
+}
+
+.article-fifth__form__additional__label_style {
+    position: relative;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+.article-fifth__form__additional__label_style::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 0.5px solid #000000;
+    border-radius: 1px;
+
+    position: absolute;
+    left: -18px;
 }
 
 .article-fifth__form__additional__checkbox-dry-cleaning-of-furniture {
@@ -818,4 +851,5 @@ body {
     font-weight: 500;
     line-height: 20.8px;
     letter-spacing: -0.0075em;
+    cursor: pointer;
 }
